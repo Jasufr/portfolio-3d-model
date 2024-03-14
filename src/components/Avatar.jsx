@@ -17,14 +17,19 @@ export function Avatar(props) {
   const { animations: kneelingAnimation } = useFBX("animations/Kneeling_Pointing.fbx");
   const { animations: walkingAnimation } = useFBX("animations/Walking.fbx");
   const { animations: pointingAnimation } = useFBX("animations/Pointing_Gesture.fbx");
+  const { animations: talkingAnimation } = useFBX("animations/Talking.fbx");
+  const { animations: bowAnimation } = useFBX("animations/Quick_Formal_Bow.fbx");
+
 
 
   standingAnimation[0].name = "Standing";
   kneelingAnimation[0].name = "Kneeling";
   walkingAnimation[0].name = "Walking";
   pointingAnimation[0].name = "Pointing";
+  talkingAnimation[0].name = "Talking";
+  bowAnimation[0].name ="Bow";
 
-  const { actions } = useAnimations([standingAnimation[0], kneelingAnimation[0], walkingAnimation[0], pointingAnimation[0]], group);
+  const { actions } = useAnimations([standingAnimation[0], kneelingAnimation[0], walkingAnimation[0], pointingAnimation[0], talkingAnimation[0], bowAnimation[0]], group);
   useFrame((state) => {
     if (headFollow) {
       group.current.getObjectByName("Head").lookAt(state.camera.position);
