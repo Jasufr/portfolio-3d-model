@@ -4,6 +4,7 @@ import { Scroll, ScrollControls } from "@react-three/drei";
 import { Interface } from "./components/Interface";
 import { useState } from "react";
 import { ScrollManager } from "./components/ScrollManager";
+import { Menu } from "./components/Menu";
 
 function App() {
   const [section, setSection] = useState(0);
@@ -20,6 +21,7 @@ function App() {
           </Scroll>
         </ScrollControls>
       </Canvas>
+      <Menu onSectionChange={setSection} />
     </>
   );
 }
