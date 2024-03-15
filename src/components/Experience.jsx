@@ -20,15 +20,36 @@ export const Experience = (props) => {
   const cameraPositionX = useMotionValue();
   const cameraLookAtX = useMotionValue();
 
+  const cameraPositionY = useMotionValue();
+  const cameraLookAtY = useMotionValue();
+
   useEffect(() => {
-    animate(cameraPositionX, section === 1 ? 4 : 0);
-    animate(cameraLookAtX, section === 1 ? -1 : 0);
+    // animate(cameraPositionX, section === 1 ? 4 : 0);
+    animate(cameraPositionX, section === 1 ? 0 : 0);
+    // animate(cameraLookAtX, section === 1 ? -1 : 0);
+    animate(cameraLookAtX, section === 1 ? 0 : 0);
+
+    animate(cameraPositionY, section === 0 ? 0 : section === 1 ? 0 : section === 2 ? 0 : 0);
+    animate(cameraLookAtY, section === 1 ? 0 : 0);
+
+
   });
 
   useFrame((state) => {
     state.camera.position.x = cameraPositionX.get();
     state.camera.lookAt(cameraLookAtX.get(), 0, 0);
+
+    state.camera.position.y = cameraPositionY.get();
+    state.camera.lookAt(cameraLookAtY.get(), 0, 0);
   });
+
+  const rotationSettings = {
+    0: [0, 0, 0],
+    1: [0, -1, 0],
+    2: [0, -1.7, 0],
+    3: [0, -0.5, 0],
+    4: [0, -0.5, 0],
+  };
 
   return (
     <>
@@ -36,19 +57,20 @@ export const Experience = (props) => {
       <Sky />
       <Environment preset="sunset" />
       <motion.group
-        // positison={[0, -1.5, 10]}
         position-y={0.1}
         animate={{
-          y: section === 1 ? 0.2 : 0,
-          // x: section === 1 ? -10 : 0,
-          // z: section === 1 ? 2.8 : 0,
-          // y: section === 1 ? -viewport.height : 1,
+          z: -0.5,
+          // y: section === 1 ? 0 : section === 2 ? 0 : 0,
+          // y: section === 3 ? 1.4 : 0,
         }}
+          rotation={rotationSettings[section] || [0, 0, 0]}
       >
         <group scale={[1.4, 1.4, 1.4]} position-y={-1.4}>
-        <Avatar animation={section === 0 ? "Standing" : "Talking"} />
+        <Avatar
+        animation={section === 1 ? "Talking" : section === 2 ? "Kneeling" : section === 3 ? "Bow" : section === 4 ? "Bow" : "Standing"}
+        />
         </group>
-        <ContactShadows opacity={0.42} scale={10} blur={1} far={10} resolution={256} color="#000000" />
+      <ContactShadows opacity={0.42} scale={10} blur={1} far={10} resolution={256} color="#000000" />
       </motion.group>
     </>
   );
