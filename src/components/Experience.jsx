@@ -54,7 +54,8 @@ export const Experience = (props) => {
   return (
     <>
       {/* <OrbitControls /> */}
-      <Sky />
+      {/* <Sky /> */}
+
       <Environment preset="sunset" />
       <motion.group
         position-y={0.1}
@@ -69,9 +70,15 @@ export const Experience = (props) => {
         <Avatar
         animation={section === 1 ? "Talking" : section === 2 ? "Kneeling" : section === 3 ? "Bow" : section === 4 ? "Bow" : "Standing"}
         />
-        </group>
       <ContactShadows opacity={0.42} scale={10} blur={1} far={10} resolution={256} color="#000000" />
+        </group>
       </motion.group>
     </>
   );
 };
+
+// const Background = () => {
+//   return (
+//     <
+//   );
+// };

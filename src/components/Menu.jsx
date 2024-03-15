@@ -4,9 +4,9 @@ export const Menu = (props) => {
   return (
     <>
       <div
-        className={`z-10 fixed top-0 right-0 bottom-0 bg-white overflow-hidden flex flex-col w-80`}
+        className={`z-10 fixed top-0 right-0 bottom-0 overflow-hidden flex flex-col`}
       >
-        <div className="flex-1 flex items-start justify-center flex-col gap-6 p-8">
+        <div className="flex-1 flex items-center justify-start flex-col gap-6 p-2">
           <MenuButton label="About" onClick={() => onSectionChange(0)} />
           <MenuButton label="Skills" onClick={() => onSectionChange(1)} />
           <MenuButton label="Projects" onClick={() => onSectionChange(2)} />
@@ -22,7 +22,7 @@ const MenuButton = (props) => {
   return (
     <button
       onClick={onClick}
-      className="text-2xl font-bold cursor-pointer hover:text-indigo-600 transition-colors"
+      className="text-2xl font-bold cursor-pointer hover:text-indigo-600 transition-colors [writing-mode:vertical-lr]"
     >
       {label}
     </button>
