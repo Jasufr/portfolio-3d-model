@@ -55,7 +55,7 @@ export const Experience = (props) => {
     <>
       {/* <OrbitControls /> */}
       {/* <Sky /> */}
-
+      {/* <Background /> */}
       <Environment preset="sunset" />
       <motion.group
         position-y={0.1}
@@ -79,6 +79,6 @@ export const Experience = (props) => {
 
 // const Background = () => {
 //   return (
-//     <
+//     <canvas id="canvas-webgl" class="p-canvas-webgl"></canvas>
 //   );
 // };

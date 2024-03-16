@@ -6,8 +6,8 @@ const Section = (props) => {
   return (
     <motion.section
       className={`
-      h-screen w-screen p-8 max-w-screen-2xl mx-auto
-      flex flex-col items-start justify-center
+      h-screen p-8 max-w-screen-2xl mx-auto
+      flex flex-col justify-center
       `}
 
       initial={{
@@ -44,9 +44,9 @@ export const Interface = () => {
 const AboutSection = () => {
   return (
   <Section>
-    <h1 className="text-6xl font-extrabold leading-snug">Bonjour, I am Justin</h1>
-    <p>I am a Front-End Developer</p>
-    <button>Contact me</button>
+    <h1 className="text-6xl font-extrabold leading-snug">Bonjour, I am Justin.</h1>
+    <p className="text-3xl font-semibold text-gray-700">I am a Front-End Developer.</p>
+    <button className="bg-red-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16">Contact me</button>
   </Section>
   );
 };
