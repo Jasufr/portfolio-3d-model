@@ -1,4 +1,11 @@
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+library.add(fas, fab);
 
 const Section = (props) => {
   const {children} = props;
@@ -44,9 +51,9 @@ export const Interface = () => {
 const AboutSection = () => {
   return (
   <Section>
-    <div className="bg-slate-100/50 py-4 px-8">
-    <h1 className="text-6xl font-extrabold leading-snug">Bonjour, I am Justin.</h1>
-    <motion.p className="text-3xl font-semibold text-gray-700"
+    <div className="">
+    <h1 className="text-6xl font-extrabold leading-snug text-slate-800">Bonjour, I am Justin.</h1>
+    <motion.p className="text-3xl font-semibold text-slate-700"
     initial={{
       opacity: 0,
       y: 25,
@@ -58,8 +65,8 @@ const AboutSection = () => {
     transition={{
       duration: 1,
       delay: 1.5,
-    }}>I am a Front-End Developer.</motion.p>
-    <motion.button className="bg-red-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16"
+    }}>Front-end Developer based in Tokyo.<br></br>JavaScript and 3D enthousiast.</motion.p>
+    <motion.div className="mt-10 flex gap-5 self-end"
     initial={{
       opacity: 0,
       y: 25,
@@ -71,7 +78,13 @@ const AboutSection = () => {
     transition={{
       duration: 1,
       delay: 2,
-    }}>Contact me</motion.button>
+    }}>
+      <button className="bg-sky-800 text-white py-4 px-8 rounded-lg font-bold text-lg hover:bg-sky-600 transition-colors duration-200">Contact me</button>
+      <div className="flex flex-col text-sky-800 text-2xl">
+        <a href="https://github.com/Jasufr" target="_blank" className="hover:text-sky-600 transition-colors duration-200"><FontAwesomeIcon icon={['fab', 'github']} /></a>
+        <a href="https://www.linkedin.com/in/justin-etienne/" target="_blank" className="hover:text-sky-600 transition-colors duration-200"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
+        </div>
+      </motion.div>
     </div>
   </Section>
   );

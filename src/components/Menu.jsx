@@ -22,7 +22,7 @@ const MenuButton = (props) => {
   return (
     <button
       onClick={onClick}
-      className="text-2xl font-bold cursor-pointer hover:text-indigo-600 transition-colors [writing-mode:vertical-lr]"
+      className="text-2xl font-bold cursor-pointer text-slate-800 hover:text-sky-600 transition-colors duration-200 [writing-mode:vertical-lr]"
     >
       {label}
     </button>
