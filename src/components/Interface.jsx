@@ -51,9 +51,9 @@ export const Interface = () => {
 const AboutSection = () => {
   return (
   <Section>
-    <div className="">
-    <h1 className="text-6xl font-extrabold leading-snug text-slate-800">Bonjour, I am Justin.</h1>
-    <motion.p className="text-3xl font-semibold text-slate-700"
+    <div>
+    <h1 className="text-6xl font-extrabold leading-snug text-slate-800 text-shadow">Bonjour, I am Justin.</h1>
+    <motion.p className="text-3xl font-semibold text-slate-700 text-shadow"
     initial={{
       opacity: 0,
       y: 25,
