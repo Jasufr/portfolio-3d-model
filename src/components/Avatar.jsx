@@ -1,16 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import { useGLTF, useFBX, useAnimations } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { useControls } from "leva";
+// import { useControls } from "leva";
 import * as THREE from "three";
 
 export function Avatar(props) {
 
   const {animation} = props;
-  const { headFollow, cursorFollow } = useControls({
-    headFollow: false,
-    cursorFollow: false,
-  });
+  // const { headFollow, cursorFollow } = useControls({
+  //   headFollow: false,
+  //   cursorFollow: false,
+  // });
   const group = useRef();
   const { nodes, materials } = useGLTF("models/65eeb285dce97d1ae1d0356a.glb");
   const { animations: standingAnimation } = useFBX("animations/Standing_W_Briefcase_Idle.fbx");
@@ -30,17 +30,17 @@ export function Avatar(props) {
   bowAnimation[0].name ="Bow";
 
   const { actions } = useAnimations([standingAnimation[0], kneelingAnimation[0], walkingAnimation[0], pointingAnimation[0], talkingAnimation[0], bowAnimation[0]], group);
-  useFrame((state) => {
-    if (headFollow) {
-      group.current.getObjectByName("Head").lookAt(state.camera.position);
-    }
-    if (cursorFollow) {
-      const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
-      group.current.getObjectByName("Head").lookAt(target);
-      group.current.getObjectByName("Spine").lookAt(target);
+  // useFrame((state) => {
+  //   if (headFollow) {
+  //     group.current.getObjectByName("Head").lookAt(state.camera.position);
+  //   }
+  //   if (cursorFollow) {
+  //     const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
+  //     group.current.getObjectByName("Head").lookAt(target);
+  //     group.current.getObjectByName("Spine").lookAt(target);
 
-    }
-  });
+  //   }
+  // });
   useEffect(() => {
     actions[animation].reset().fadeIn(0.5).play();
     return () => {

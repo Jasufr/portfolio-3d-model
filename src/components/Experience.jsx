@@ -1,21 +1,25 @@
-import { ContactShadows, Environment, OrbitControls, Sky } from "@react-three/drei";
+import { ContactShadows, Environment, OrbitControls, Sky, Stars, Sparkles, Cloud } from "@react-three/drei";
 import { Avatar } from "./Avatar";
-import { useControls } from "leva";
+// import { useControls } from "leva";
 import { useMotionValue, animate } from "framer-motion";
 import { motion } from "framer-motion-3d"
 import { useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-
+// import { useSpring, animated } from "react-spring";
 
 export const Experience = (props) => {
-  const {section} = props;
+  const {section, sunPosition} = props;
   const {viewport} = useThree();
-  const {animation} = useControls({
-    animation: {
-      value: "Standing",
-    options: ["Standing", "Kneeling", "Walking", "Pointing", "Talking", "Bow"]
-    },
-  });
+  // const {animation} = useControls({
+  //   animation: {
+  //     value: "Standing",
+  //   options: ["Standing", "Kneeling", "Walking", "Pointing", "Talking", "Bow"]
+  //   },
+  // });
+  // const springProps = useSpring({
+  //   sunPosition: sunPosition.join(" "),
+  //   config: { duration: 500 }
+  // });
 
   const cameraPositionX = useMotionValue();
   const cameraLookAtX = useMotionValue();
@@ -54,8 +58,21 @@ export const Experience = (props) => {
   return (
     <>
       {/* <OrbitControls /> */}
-      {/* <Sky /> */}
-      {/* <Background /> */}
+      <Stars
+      />
+      {/* <animated.div
+        style={springProps}
+      > */}
+      <Sky
+        // inclination={1}
+        sunPosition={sunPosition}
+      />
+      {/* </animated.div> */}
+      <Cloud
+        segments={12}
+        volume={5}
+        position={[0, 0, -10]}
+      />
       <Environment preset="sunset" />
       <motion.group
         position-y={0.1}
@@ -70,15 +87,9 @@ export const Experience = (props) => {
         <Avatar
         animation={section === 1 ? "Talking" : section === 2 ? "Kneeling" : section === 3 ? "Bow" : section === 4 ? "Bow" : "Standing"}
         />
-      <ContactShadows opacity={0.42} scale={10} blur={1} far={10} resolution={256} color="#000000" />
+      {/* <ContactShadows opacity={0.42} scale={10} blur={1} far={10} resolution={256} color="#000000" /> */}
         </group>
       </motion.group>
     </>
   );
 };
-
-// const Background = () => {
-//   return (
-//     <canvas id="canvas-webgl" class="p-canvas-webgl"></canvas>
-//   );
-// };
