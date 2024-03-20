@@ -52,8 +52,8 @@ const AboutSection = () => {
   return (
   <Section>
     <div>
-    <h1 className="text-6xl font-extrabold leading-snug text-slate-800 text-shadow">Bonjour, I am Justin.</h1>
-    <motion.p className="text-3xl font-semibold text-slate-700 text-shadow"
+    <h1 className="text-6xl font-extrabold leading-snug text-slate-500 text-shadow">Bonjour, I am Justin.</h1>
+    <motion.p className="text-3xl font-semibold text-slate-300"
     initial={{
       opacity: 0,
       y: 25,
@@ -63,8 +63,8 @@ const AboutSection = () => {
       y: 0,
     }}
     transition={{
-      duration: 1,
-      delay: 1.5,
+      duration: 0.5,
+      delay: 1,
     }}>Front-end Developer based in Tokyo.<br></br>JavaScript and 3D enthousiast.</motion.p>
     <motion.div className="mt-10 flex gap-5 self-end"
     initial={{
@@ -76,8 +76,8 @@ const AboutSection = () => {
       y: 0,
     }}
     transition={{
-      duration: 1,
-      delay: 2,
+      duration: 0.5,
+      delay: 1.5,
     }}>
       <button className="bg-sky-800 text-white py-4 px-8 rounded-lg font-bold text-lg hover:bg-sky-600 transition-colors duration-200">Contact me</button>
       <div className="flex flex-col text-sky-800 text-2xl">
@@ -116,7 +116,7 @@ const skills = [
 const languages = [
   {
     title: "French",
-    level: 100,
+    level: 101,
   },
   {
     title: "English",
@@ -132,11 +132,11 @@ const SkillsSection = () => {
   return (
     <Section>
       <motion.div whileInView={"visible"}>
-        <h2 className="text-5xl font-bold">Skills</h2>
+        <h2 className="text-5xl font-bold text-slate-500 text-shadow">Skills</h2>
         <div className="mt-8 space-y-4">
           {skills.map((skill, index) => (
             <div className="w-64" key={index}>
-              <motion.h3 className="text-xl font-bold text-gray-800"
+              <motion.h3 className="text-xl font-bold text-slate-300"
                 initial={{
                   opacity: 0,
                 }}
@@ -145,13 +145,13 @@ const SkillsSection = () => {
                     opacity: 1,
                     transition: {
                       duration: 1,
-                      delay: 1 + index * 0.2,
+                      delay: 0.5 + index * 0.2,
                     }
                   },
                 }}
               >{skill.title}</motion.h3>
               <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
-                <motion.div className="h-full bg-indigo-500 rounded-full" style={{ width: `${skill.level}%`}}
+                <motion.div className="h-full bg-sky-800 rounded-full" style={{ width: `${skill.level}%`}}
                   initial={{
                     scaleX: 0,
                     originX: 0,
@@ -161,7 +161,7 @@ const SkillsSection = () => {
                       scaleX: 1,
                       transition:{
                         duration: 1,
-                        delay: 1 + index * 0.2,
+                        delay: 0.5 + index * 0.2,
                       }
                     },
                   }}
@@ -171,11 +171,11 @@ const SkillsSection = () => {
           ))}
         </div>
         <div className="mt-8 space-y-4">
-          <h2 className="text-5xl font-bold mt-10">Languages</h2>
+          <h2 className="text-5xl font-bold mt-10 text-slate-500 text-shadow">Languages</h2>
           <div>
             {languages.map((lng, index) => (
             <div className="w-64" key={index}>
-            <motion.h3 className="text-xl font-bold text-gray-800"
+            <motion.h3 className="text-xl font-bold text-slate-300"
               initial={{
                 opacity: 0,
               }}
@@ -184,13 +184,13 @@ const SkillsSection = () => {
                   opacity: 1,
                   transition: {
                     duration: 1,
-                    delay: 2 + index * 0.2,
+                    delay: 1.5 + index * 0.2,
                   }
                 },
               }}
             >{lng.title}</motion.h3>
             <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
-              <motion.div className="h-full bg-indigo-500 rounded-full" style={{ width: `${lng.level}%`}}
+              <motion.div className="h-full bg-sky-800 rounded-full" style={{ width: `${lng.level}%`}}
                 initial={{
                   scaleX: 0,
                   originX: 0,
@@ -200,7 +200,7 @@ const SkillsSection = () => {
                     scaleX: 1,
                     transition:{
                       duration: 1,
-                      delay: 2 + index * 0.2,
+                      delay: 1.5 + index * 0.2,
                     }
                   },
                 }}
