@@ -218,7 +218,46 @@ const SkillsSection = () => {
 const ContactSection = () => {
   return (
     <Section>
-      <h1>Blablabla contact me form</h1>
+      <h2 className="text-5xl text-slate-500 text-shadow font-bold">Contact me</h2>
+      <div className=" p-8 rounded-md w-96 max-w-full">
+      <form>
+          <label for="name" className="font-medium text-slate-300 block mb-1">
+            Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            className="block w-full rounded-md border-0 text-slate-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
+          />
+          <label
+            for="email"
+            className="font-medium text-slate-300 block mb-1 mt-8"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            className="block w-full rounded-md border-0 text-slate-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
+          />
+          <label
+            for="email"
+            className="font-medium text-slate-300 block mb-1 mt-8"
+          >
+            Message
+          </label>
+          <textarea
+            name="message"
+            id="message"
+            className="max-h-32 block w-full rounded-md border-0 text-slate-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
+          />
+          <button className="bg-sky-800 hover:bg-sky-600 transition-colors duration-200 text-white py-4 px-8 rounded-lg font-bold text-lg mt-10 ">
+            Submit
+          </button>
+        </form>
+      </div>
     </Section>
   );
 };

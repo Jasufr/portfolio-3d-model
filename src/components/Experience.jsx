@@ -83,7 +83,7 @@ export const Experience = (props) => {
         }}
           rotation={rotationSettings[section] || [0, 0, 0]}
       >
-        <group scale={[1.4, 1.4, 1.4]} position-y={-1.4}>
+        <group scale={[1.4, 1.4, 1.4]} position={[0, -1.4, 0]}>
         <Avatar
         animation={section === 1 ? "Talking" : section === 2 ? "Kneeling" : section === 3 ? "Bow" : section === 4 ? "Bow" : "Standing"}
         />
