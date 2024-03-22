@@ -54,7 +54,7 @@ const AboutSection = () => {
   <Section>
     <div>
     <h1 className="text-6xl font-extrabold leading-snug text-slate-500 text-shadow">Bonjour, I am Justin.</h1>
-    <motion.p className="text-3xl font-semibold text-slate-300"
+    <motion.p className="text-3xl font-semibold text-slate-50"
     initial={{
       opacity: 0,
       y: 25,
@@ -137,7 +137,7 @@ const SkillsSection = () => {
         <div className="mt-8 space-y-4">
           {skills.map((skill, index) => (
             <div className="w-64" key={index}>
-              <motion.h3 className="text-xl font-bold text-slate-300"
+              <motion.h3 className="text-xl font-bold text-slate-50"
                 initial={{
                   opacity: 0,
                 }}
@@ -176,7 +176,7 @@ const SkillsSection = () => {
           <div>
             {languages.map((lng, index) => (
             <div className="w-64" key={index}>
-            <motion.h3 className="text-xl font-bold text-slate-300"
+            <motion.h3 className="text-xl font-bold text-slate-50"
               initial={{
                 opacity: 0,
               }}
@@ -224,7 +224,7 @@ const ContactSection = () => {
       <p className="successMessage hidden text-green-300 font-bold pt-1">Thank you! I will get back to you as soon as possible.</p>
       <p className="fillInError hidden text-red-600 font-bold p-1">Please fill in all the inputs.</p>
       <div>
-          <label htmlFor="name" className="font-medium text-slate-300 block mb-1">
+          <label htmlFor="name" className="font-medium text-slate-50 block mb-1">
             Name/Company
           </label>
           <input
@@ -236,7 +236,7 @@ const ContactSection = () => {
           />
           <label
             htmlFor="email"
-            className="font-medium text-slate-300 block mb-1 mt-6"
+            className="font-medium text-slate-50 block mb-1 mt-6"
           >
             Email Address
           </label>
@@ -250,7 +250,7 @@ const ContactSection = () => {
           <p className="emailError hidden text-red-600 font-bold p-1">Please enter a valid email address.</p>
           <label
             htmlFor="message"
-            className="font-medium text-slate-300 block mb-1 mt-6"
+            className="font-medium text-slate-50 block mb-1 mt-6"
           >
             Message
           </label>
