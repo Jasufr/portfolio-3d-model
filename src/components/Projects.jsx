@@ -18,6 +18,12 @@ export const projects = [
     image: "projects/test2.png",
     description: "Description test2",
   },
+  {
+    title: "Test 3",
+    url: "www.google.com",
+    image: "projects/test1.png",
+    description: "Decription test3",
+  },
 ];
 
 const Project = (props) => {
