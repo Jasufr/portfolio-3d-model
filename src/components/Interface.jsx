@@ -220,51 +220,7 @@ const ContactSection = () => {
   return (
     <Section>
       <h2 className="text-5xl text-slate-500 text-shadow font-bold">Contact me</h2>
-      <div className="pt-3 rounded-md w-96 max-w-full">
-      <p className="successMessage hidden text-green-300 font-bold pt-1">Thank you! I will get back to you as soon as possible.</p>
-      <p className="fillInError hidden text-red-600 font-bold p-1">Please fill in all the inputs.</p>
-      <div>
-          <label htmlFor="name" className="font-medium text-slate-50 block mb-1">
-            Name/Company
-          </label>
-          <input
-            required
-            type="text"
-            name="name"
-            id="name"
-            className="block w-full rounded-md border-0 text-slate-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
-          />
-          <label
-            htmlFor="email"
-            className="font-medium text-slate-50 block mb-1 mt-6"
-          >
-            Email Address
-          </label>
-          <input
-            required
-            type="email"
-            name="email"
-            id="email_id"
-            className="block w-full rounded-md border-0 text-slate-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
-          />
-          <p className="emailError hidden text-red-600 font-bold p-1">Please enter a valid email address.</p>
-          <label
-            htmlFor="message"
-            className="font-medium text-slate-50 block mb-1 mt-6"
-          >
-            Message
-          </label>
-          <textarea
-            required
-            name="message"
-            id="message"
-            className="max-h-32 block w-full rounded-md border-0 text-slate-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
-          />
-          <button  onClick={() => SendMail()} id="sendButton" className="bg-sky-800 hover:bg-sky-600 transition-colors duration-200 text-white py-4 px-8 rounded-lg font-bold text-lg mt-10 ">
-            Submit
-          </button>
-        </div>
-      </div>
+      <SendMail /> {/* Render the SendMail component */}
     </Section>
   );
 };
