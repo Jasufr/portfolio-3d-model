@@ -53,7 +53,7 @@ const AboutSection = () => {
   return (
   <Section>
     <div>
-    <h1 className="text-6xl font-extrabold leading-snug text-slate-500 text-shadow">Bonjour, I am Justin.</h1>
+    <h1 className="text-6xl font-extrabold leading-snug text-sky-800 text-shadow">Bonjour, I am Justin.</h1>
     <motion.p className="text-3xl font-semibold text-slate-50"
     initial={{
       opacity: 0,
@@ -133,7 +133,7 @@ const SkillsSection = () => {
   return (
     <Section>
       <motion.div whileInView={"visible"}>
-        <h2 className="text-5xl font-bold text-slate-500 text-shadow">Skills</h2>
+        <h2 className="text-5xl font-bold text-sky-800 text-shadow">Skills</h2>
         <div className="mt-8 space-y-4">
           {skills.map((skill, index) => (
             <div className="w-64" key={index}>
@@ -172,7 +172,7 @@ const SkillsSection = () => {
           ))}
         </div>
         <div className="mt-8 space-y-4">
-          <h2 className="text-5xl font-bold mt-10 text-slate-500 text-shadow">Languages</h2>
+          <h2 className="text-5xl font-bold mt-10 text-sky-800 text-shadow">Languages</h2>
           <div>
             {languages.map((lng, index) => (
             <div className="w-64" key={index}>
@@ -219,7 +219,7 @@ const SkillsSection = () => {
 const ContactSection = () => {
   return (
     <Section>
-      <h2 className="text-5xl text-slate-500 text-shadow font-bold">Contact me</h2>
+      <h2 className="text-5xl text-sky-800 text-shadow font-bold">Contact me</h2>
       <SendMail /> {/* Render the SendMail component */}
     </Section>
   );
@@ -237,14 +237,14 @@ const ProjectsSection = () => {
 
   return (
     <Section>
-      <div className="flex w-full h-full gap-8 justify-center">
+      <div className="flex w-full h-full gap-8 justify-center mt-6">
         <button
           className="hover:text-sky-600 self-start transition-colors mt-5 text-xl font-bold text-sky-800"
           onClick={previousProject}
         >
           Previous
         </button>
-        <h2 className="text-5xl font-bold text-slate-500 text-shadow">Projects</h2>
+        <h2 className="text-5xl font-bold text-sky-800 text-shadow">Projects</h2>
         <button
           className="hover:text-sky-600 transition-colors self-start mt-5 text-xl font-bold text-sky-800"
           onClick={nextProject}

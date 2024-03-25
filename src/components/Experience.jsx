@@ -60,7 +60,7 @@ export const Experience = (props) => {
       <Cloud
         segments={12}
         // volume={5}
-        position={[0, 0, -10]}
+        position={[0, -8, -13]}
       />
       <Environment preset="sunset" />
       <motion.group
