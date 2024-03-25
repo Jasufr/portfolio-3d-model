@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
 
 export const ScrollManager = (props) => {
-  const {section, onSectionChange} = props;
+  const { section, onSectionChange } = props;
 
   const data = useScroll();
   const lastScroll = useRef(0);
@@ -33,7 +33,7 @@ export const ScrollManager = (props) => {
     }
 
     const curSection = Math.floor(data.scroll.current * data.pages);
-    if (data.scroll.current > lastScroll.current && curSection === 0 ) {
+    if (data.scroll.current > lastScroll.current && curSection === 0) {
       onSectionChange(1);
     }
     if (data.scroll.current < lastScroll.current && data.scroll.current < 1 / (data.pages - 1)
@@ -41,8 +41,6 @@ export const ScrollManager = (props) => {
       onSectionChange(0);
     }
     lastScroll.current = data.scroll.current;
-    // console.log(section);
-    // console.log(data.scroll.current);
   });
 
   return null;

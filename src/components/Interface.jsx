@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { currentProjectAtom, projects } from "./Projects";
+import { SendMail } from "./SendMail";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { SendMail } from "./SendMail";
-import { useAtom } from "jotai";
-import { currentProjectAtom, projects } from "./Projects";
 
 library.add(fas, fab);
 
@@ -281,20 +281,20 @@ const ProjectsSection = () => {
 
   return (
     <Section>
-      <div className="flex w-full h-full gap-8 items-center justify-center">
-        <button
+      <div className="flex w-full h-full gap-8 justify-center">
+        <a
           className="hover:text-indigo-600 transition-colors"
           onClick={previousProject}
         >
           Previous
-        </button>
+        </a>
         <h2 className="text-5xl font-bold">Projects</h2>
-        <button
+        <a
           className="hover:text-indigo-600 transition-colors"
           onClick={nextProject}
         >
           Next
-        </button>
+        </a>
       </div>
     </Section>
   );

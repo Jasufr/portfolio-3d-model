@@ -12,7 +12,7 @@ export const SendMail = () => {
     if (!emailRegex.test(emailId)) {
       // alert("Please enter a valid email address.");
       emailErrorMessage.classList.remove("hidden");
-      emailIdInput.focus();
+      // emailIdInput.focus();
     } else {
       emailErrorMessage.classList.add("hidden");
     }
