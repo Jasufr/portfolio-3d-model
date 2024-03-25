@@ -20,7 +20,7 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
         if (prevSunPosition[1] === -1) {
           // If the sunPosition is [-1], update it to [10, 1, 10]
           setButtonLabel(<FontAwesomeIcon icon={faSun} />);
-          return [10, 1, 10];
+          return [10, 2, 10];
         } else {
           // If the sunPosition is [1], update it to [10, -1, 10]
           setButtonLabel(<FontAwesomeIcon icon={faMoon} />);
