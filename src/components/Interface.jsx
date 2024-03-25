@@ -238,19 +238,19 @@ const ProjectsSection = () => {
   return (
     <Section>
       <div className="flex w-full h-full gap-8 justify-center">
-        <a
-          className="hover:text-indigo-600 transition-colors"
+        <button
+          className="hover:text-sky-600 self-start transition-colors mt-5 text-xl font-bold text-sky-800"
           onClick={previousProject}
         >
           Previous
-        </a>
-        <h2 className="text-5xl font-bold">Projects</h2>
-        <a
-          className="hover:text-indigo-600 transition-colors"
+        </button>
+        <h2 className="text-5xl font-bold text-slate-500 text-shadow">Projects</h2>
+        <button
+          className="hover:text-sky-600 transition-colors self-start mt-5 text-xl font-bold text-sky-800"
           onClick={nextProject}
         >
           Next
-        </a>
+        </button>
       </div>
     </Section>
   );
