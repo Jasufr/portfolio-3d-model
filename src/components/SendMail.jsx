@@ -102,7 +102,7 @@ export const SendMail = () => {
           onChange={handleChange}
           className="max-h-32 block w-full bg-transparent rounded-md border-0 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
         />
-        <button type="submit" className="bg-sky-800 w-full hover:bg-sky-600 transition-colors duration-200 text-white py-4 px-8 rounded-lg font-bold text-lg mt-6">
+        <button type="submit" className="bg-sky-800 w-full hover:bg-sky-600 transition-colors duration-200 text-white py-3 px-7 rounded-lg font-bold text-sm sm:text-lg mt-6">
           Submit
         </button>
       </form>
