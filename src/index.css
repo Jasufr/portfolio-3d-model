@@ -14,3 +14,7 @@ body {
 .text-shadow {
   text-shadow: -1px -1px 1px white;
 }
+
+* {
+  font-family: "Tilt Warp", sans-serif;
+}

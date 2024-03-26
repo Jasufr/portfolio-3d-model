@@ -77,7 +77,7 @@ export const SendMail = () => {
           id="name"
           value={formData.name}
           onChange={handleChange}
-          className="block w-full rounded-md border-0 text-slate-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
+          className="block w-full bg-transparent rounded-md border-0 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
         />
         <label htmlFor="email" className="font-medium text-slate-50 block mb-1 mt-6">
           Email Address
@@ -89,7 +89,7 @@ export const SendMail = () => {
           value={formData.email}
           onBlur={validateEmail}
           onChange={handleChange}
-          className="block w-full rounded-md border-0 text-slate-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
+          className="block w-full rounded-md border-0 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3 bg-transparent"
         />
         {errors.email && <p className="text-red-600 font-bold p-1">{errors.email}</p>}
         <label htmlFor="message" className="font-medium text-slate-50 block mb-1 mt-6">
@@ -100,9 +100,9 @@ export const SendMail = () => {
           id="message"
           value={formData.message}
           onChange={handleChange}
-          className="max-h-32 block w-full rounded-md border-0 text-slate-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
+          className="max-h-32 block w-full bg-transparent rounded-md border-0 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 p-3"
         />
-        <button type="submit" className="bg-sky-800 hover:bg-sky-600 transition-colors duration-200 text-white py-4 px-8 rounded-lg font-bold text-lg mt-10">
+        <button type="submit" className="bg-sky-800 w-full hover:bg-sky-600 transition-colors duration-200 text-white py-4 px-8 rounded-lg font-bold text-lg mt-6">
           Submit
         </button>
       </form>

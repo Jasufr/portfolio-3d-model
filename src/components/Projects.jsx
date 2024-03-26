@@ -8,28 +8,16 @@ import { useEffect, useRef } from "react";
 
 export const projects = [
   {
-    title: "Test1",
+    title: "Coshub",
     url: "google.com",
     image: "projects/test1.png",
-    description: "Description test1",
+    description: "Marketplace website for renting cosplays from individuals easily.",
   },
   {
-    title: "Test1",
+    title: "FRNSHR",
     url: "google.com",
-    image: "projects/test1.png",
-    description: "Description test1",
-  },
-  {
-    title: "Test1",
-    url: "google.com",
-    image: "projects/test1.png",
-    description: "Description test1",
-  },
-  {
-    title: "Test2",
-    url: "frnshr.shop",
     image: "projects/test2.png",
-    description: "Description test2",
+    description: "Interior design tool for finding suitable furniture from several websites based on a specific color scheme.",
   },
   {
     title: "Test 3",

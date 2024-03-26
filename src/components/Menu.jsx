@@ -4,9 +4,9 @@ export const Menu = (props) => {
   return (
     <>
       <div
-        className={`z-10 fixed top-0 right-4 bottom-0 overflow-hidden flex flex-col`}
+        className={`z-10 fixed top-0 right-1 md:right-4 bottom-0 overflow-hidden flex flex-col`}
       >
-        <div className="flex-1 flex items-center justify-start flex-col gap-6 p-2 w-12">
+        <div className="flex-1 flex items-center justify-start flex-col gap-6 p-2 w-8 md:w-12">
           <MenuButton label="About" onClick={() => onSectionChange(0)} />
           <MenuButton label="Skills" onClick={() => onSectionChange(1)} />
           <MenuButton label="Projects" onClick={() => onSectionChange(2)} />

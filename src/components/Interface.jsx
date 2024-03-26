@@ -17,7 +17,8 @@ const Section = (props) => {
     <motion.section
       className={`
       h-screen p-8 max-w-screen-2xl mx-auto
-      flex flex-col justify-center w-9/12
+      flex flex-col w-9/12
+      justify-center
       `}
 
       initial={{
@@ -52,9 +53,9 @@ export const Interface = () => {
 const AboutSection = () => {
   return (
   <Section>
-    <div>
-    <h1 className="text-6xl font-extrabold leading-snug text-sky-800 text-shadow">Bonjour, I am Justin.</h1>
-    <motion.p className="text-3xl font-semibold text-slate-50"
+    <div className="flex flex-col items-center md:items-start">
+    <h1 className="text-4xl md:text-6xl font-extrabold leading-snug text-sky-800 text-shadow">Bonjour, I am Justin.</h1>
+    <motion.p className="text-xl md:text-3xl font-semibold text-slate-50"
     initial={{
       opacity: 0,
       y: 25,
@@ -67,7 +68,7 @@ const AboutSection = () => {
       duration: 0.5,
       delay: 1,
     }}>Front-end Developer based in Tokyo.<br></br>JavaScript and 3D enthousiast.</motion.p>
-    <motion.div className="mt-10 flex gap-5 self-end"
+    <motion.div className="mt-6 flex flex-col sm:flex-row items-center gap-2 md:gap-5 "
     initial={{
       opacity: 0,
       y: 25,
@@ -80,10 +81,11 @@ const AboutSection = () => {
       duration: 0.5,
       delay: 1.5,
     }}>
-      <button className="bg-sky-800 text-white py-4 px-8 rounded-lg font-bold text-lg hover:bg-sky-600 transition-colors duration-200">Contact me</button>
-      <div className="flex flex-col text-sky-800 text-2xl">
+      <button className="bg-sky-800 text-white py-3 px-7 rounded-lg font-bold text-sm md:text-lg hover:bg-sky-600 transition-colors duration-200">Contact me</button>
+      <div className="flex text-sky-800 text-2xl md:text-4xl gap-2 md:gap-5 items-center">
         <a href="https://github.com/Jasufr" target="_blank" className="hover:text-sky-600 transition-colors duration-200"><FontAwesomeIcon icon={['fab', 'github']} /></a>
         <a href="https://www.linkedin.com/in/justin-etienne/" target="_blank" className="hover:text-sky-600 transition-colors duration-200"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
+        <a href="https://www.wantedly.com/id/justin_etienne" target="_blank" className="hover:text-sky-600 transition-colors duration-200"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M18.453 14.555c-.171-.111-.658-.764-2.006-3.982a9.192 9.192 0 0 0-.237-.526l-.274-.664l-2.362-5.702H8.85l2.362 5.702l2.362 5.706l2.181 5.267a.196.196 0 0 0 .362 0l2.373-5.682a.1.1 0 0 0-.037-.119m-8.85 0c-.171-.111-.658-.764-2.006-3.982a8.971 8.971 0 0 0-.236-.525l-.276-.665l-2.36-5.702H0l2.362 5.702l2.362 5.706l2.181 5.267a.196.196 0 0 0 .362 0l2.374-5.682a.098.098 0 0 0-.038-.119M24 6.375a2.851 2.851 0 0 1-2.851 2.852a2.851 2.851 0 0 1-2.852-2.852a2.851 2.851 0 0 1 2.852-2.851A2.851 2.851 0 0 1 24 6.375"/></svg></a>
         </div>
       </motion.div>
     </div>
@@ -132,12 +134,12 @@ const languages = [
 const SkillsSection = () => {
   return (
     <Section>
-      <motion.div whileInView={"visible"}>
-        <h2 className="text-5xl font-bold text-sky-800 text-shadow">Skills</h2>
-        <div className="mt-8 space-y-4">
+      <motion.div className="w-full" whileInView={"visible"}>
+        <h2 className="text-3xl sm:text-5xl font-bold text-sky-800 text-shadow">Skills</h2>
+        <div className="mt-4 space-y-4">
           {skills.map((skill, index) => (
-            <div className="w-64" key={index}>
-              <motion.h3 className="text-xl font-bold text-slate-50"
+            <div className="sm:w-64" key={index}>
+              <motion.h3 className="text-lg sm:text-xl font-bold text-slate-50"
                 initial={{
                   opacity: 0,
                 }}
@@ -151,7 +153,7 @@ const SkillsSection = () => {
                   },
                 }}
               >{skill.title}</motion.h3>
-              <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
+              <div className="h-2 w-full bg-gray-200 rounded-full sm:mt-2">
                 <motion.div className="h-full bg-sky-800 rounded-full" style={{ width: `${skill.level}%`}}
                   initial={{
                     scaleX: 0,
@@ -171,12 +173,11 @@ const SkillsSection = () => {
             </div>
           ))}
         </div>
-        <div className="mt-8 space-y-4">
-          <h2 className="text-5xl font-bold mt-10 text-sky-800 text-shadow">Languages</h2>
-          <div>
+          <h2 className="text-3xl sm:text-5xl font-bold mt-6 sm:mt-10 text-sky-800 text-shadow">Languages</h2>
+          <div className="mt-4 space-y-4">
             {languages.map((lng, index) => (
-            <div className="w-64" key={index}>
-            <motion.h3 className="text-xl font-bold text-slate-50"
+            <div className="sm:w-64" key={index}>
+            <motion.h3 className="text-sm sm:text-lg  font-bold text-slate-50"
               initial={{
                 opacity: 0,
               }}
@@ -190,7 +191,7 @@ const SkillsSection = () => {
                 },
               }}
             >{lng.title}</motion.h3>
-            <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
+            <div className="h-2 w-full bg-gray-200 rounded-full sm:mt-2">
               <motion.div className="h-full bg-sky-800 rounded-full" style={{ width: `${lng.level}%`}}
                 initial={{
                   scaleX: 0,
@@ -210,7 +211,6 @@ const SkillsSection = () => {
           </div>
             ))}
           </div>
-        </div>
       </motion.div>
     </Section>
   );
@@ -219,7 +219,7 @@ const SkillsSection = () => {
 const ContactSection = () => {
   return (
     <Section>
-      <h2 className="text-5xl text-sky-800 text-shadow font-bold">Contact me</h2>
+      <h2 className="text-3xl md:text-5xl text-sky-800 text-shadow font-bold">Contact me</h2>
       <SendMail /> {/* Render the SendMail component */}
     </Section>
   );
@@ -237,16 +237,16 @@ const ProjectsSection = () => {
 
   return (
     <Section>
-      <div className="flex w-full h-full gap-8 justify-center mt-6">
+      <div className="flex w-full h-full sm:gap-8 justify-center mt-6">
         <button
-          className="hover:text-sky-600 self-start transition-colors mt-5 text-xl font-bold text-sky-800"
+          className="hover:text-sky-600 self-end sm:self-start transition-colors mb-10 sm:mb-0 sm:mt-5 text-xl font-bold text-sky-800"
           onClick={previousProject}
         >
           Previous
         </button>
-        <h2 className="text-5xl font-bold text-sky-800 text-shadow">Projects</h2>
+        <h2 className="text-3xl mt-10 sm:mt-0 sm:text-5xl font-bold text-sky-800 text-shadow">Projects</h2>
         <button
-          className="hover:text-sky-600 transition-colors self-start mt-5 text-xl font-bold text-sky-800"
+          className="hover:text-sky-600 transition-colors self-end sm:self-start mb-10 sm:mb-0 sm:mt-5 text-xl font-bold text-sky-800"
           onClick={nextProject}
         >
           Next
