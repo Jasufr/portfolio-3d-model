@@ -220,7 +220,7 @@ const ContactSection = () => {
   return (
     <Section>
       <h2 className="text-3xl md:text-5xl text-sky-800 text-shadow font-bold">Contact me</h2>
-      <SendMail /> {/* Render the SendMail component */}
+      <SendMail />
     </Section>
   );
 };

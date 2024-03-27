@@ -7,6 +7,10 @@
   height: 100vh;
 }
 
+* {
+  font-family: "Tilt Warp", sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -15,6 +19,14 @@ body {
   text-shadow: -1px -1px 1px white;
 }
 
-* {
-  font-family: "Tilt Warp", sans-serif;
+form input:-webkit-autofill,
+form input:-webkit-autofill:focus,
+form input:-webkit-autofill:hover,
+form textarea:-webkit-autofill,
+form textarea:-webkit-autofill:focus,
+form textarea:-webkit-autofill:hover,
+form input:-internal-autofill-selected,
+form textarea:-internal-autofill-selected {
+    -webkit-text-fill-color: #d1d5db;
+    transition: background-color 5000s ease-in-out 0s !important;
 }

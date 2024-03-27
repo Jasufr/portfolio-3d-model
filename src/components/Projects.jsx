@@ -9,21 +9,15 @@ import { useEffect, useRef } from "react";
 export const projects = [
   {
     title: "Coshub",
-    url: "google.com",
-    image: "projects/test1.png",
+    url: "https://www.google.com",
+    image: "projects/coshub.png",
     description: "Marketplace website for renting cosplays from individuals easily.",
   },
   {
     title: "FRNSHR",
-    url: "google.com",
-    image: "projects/test2.png",
+    url: "https://www.frnshr.shop",
+    image: "projects/frnshr.png",
     description: "Interior design tool for finding suitable furniture from several websites based on a specific color scheme.",
-  },
-  {
-    title: "Test 3",
-    url: "www.google.com",
-    image: "projects/test1.png",
-    description: "Decription test3",
   },
 ];
 

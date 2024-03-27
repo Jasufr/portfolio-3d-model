@@ -5,30 +5,17 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
   export const Theme = (props) => {
     const {onThemeChange} = props;
     const [buttonLabel, setButtonLabel] = useState(<FontAwesomeIcon icon={faMoon} />);
-
-    // useEffect(() => {
-    //   if (props.sunPosition[1] === -1) {
-    //     setButtonLabel("Toggle Day Mode");
-    //   } else {
-    //     setButtonLabel("Toggle Night Mode");
-    //   }
-    // }, [props, sunPosition]);
-
     const changeThemeButton = () => {
-      // Get the current sunPosition value from the parent component
       onThemeChange(prevSunPosition => {
         if (prevSunPosition[1] === -1) {
-          // If the sunPosition is [-1], update it to [10, 1, 10]
           setButtonLabel(<FontAwesomeIcon icon={faSun} />);
           return [10, 3, 10];
         } else {
-          // If the sunPosition is [1], update it to [10, -1, 10]
           setButtonLabel(<FontAwesomeIcon icon={faMoon} />);
           return [10, -1, 10];
         }
 
       });
-      // Check the current sunPosition value
     };
 
     return (

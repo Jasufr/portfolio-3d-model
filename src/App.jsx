@@ -3,19 +3,22 @@ import { Leva } from "leva";
 import { Experience } from "./components/Experience";
 import { Scroll, ScrollControls } from "@react-three/drei";
 import { Interface } from "./components/Interface";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { ScrollManager } from "./components/ScrollManager";
 import { Menu } from "./components/Menu";
 import { Theme } from "./components/Theme";
 import { MotionConfig } from "framer-motion";
 import { framerMotionConfig } from "./config";
+import { LoadingScreen } from "./components/LoadingScreen";
 
 function App() {
   const [section, setSection] = useState(0);
   const [sunPosition, setSunPosition] = useState([10, -1, 10]);
+  const [started, setStarted] = useState(false);
 
   return (
     <>
+    <LoadingScreen started={started} setStarted={setStarted} />
     <MotionConfig transition={{
       ...framerMotionConfig,
     }}>
@@ -25,10 +28,12 @@ function App() {
         <ScrollControls pages={4} damping={0.1}>
           <ScrollManager section={section} onSectionChange={setSection} />
           <Scroll>
-            <Experience section={section} sunPosition={sunPosition} />
+            <Suspense>
+              {started && (<Experience section={section} sunPosition={sunPosition} />)}
+            </Suspense>
           </Scroll>
           <Scroll html>
-            <Interface setSection={setSection} />
+            {started && (<Interface setSection={setSection} />)}
           </Scroll>
         </ScrollControls>
       </Canvas>
