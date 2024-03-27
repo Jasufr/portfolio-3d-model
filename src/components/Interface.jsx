@@ -237,7 +237,7 @@ const ProjectsSection = () => {
 
   return (
     <Section>
-      <div className="flex flex-col items-center w-full h-full justify-between sm:justify-start sm:gap-2 mt-6">
+      <div className="flex flex-col items-center w-full h-full justify-around sm:justify-start gap-32 sm:gap-2 mt-6">
         <h2 className="text-3xl sm:text-5xl font-bold text-sky-800 text-shadow">Projects</h2>
         <div className="flex gap-24 sm:gap-52 items-end mb-4">
            <button
