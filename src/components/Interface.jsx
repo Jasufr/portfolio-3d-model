@@ -39,10 +39,11 @@ const Section = (props) => {
   )
 }
 
-export const Interface = () => {
+export const Interface = (props) => {
+  const { setSection } = props;
   return <>
     <div className="flex flex-col items-center w-screen">
-    <AboutSection />
+    <AboutSection setSection={setSection} />
     <SkillsSection />
     <ProjectsSection />
     <ContactSection />
@@ -50,7 +51,8 @@ export const Interface = () => {
   </>;
 };
 
-const AboutSection = () => {
+const AboutSection = (props) => {
+  const { setSection } = props;
   return (
   <Section>
     <div className="flex flex-col items-center sm:items-start">
@@ -81,7 +83,7 @@ const AboutSection = () => {
       duration: 0.5,
       delay: 1.5,
     }}>
-      <button className="bg-sky-800 text-white py-3 px-7 rounded-lg font-bold text-sm sm:text-lg hover:bg-sky-600 transition-colors duration-200">Contact me</button>
+      <button onClick={() => setSection(3)} className="bg-sky-800 text-white py-3 px-7 rounded-lg font-bold text-sm sm:text-lg hover:bg-sky-600 transition-colors duration-200">Contact me</button>
       <div className="flex text-sky-800 text-2xl sm:text-4xl gap-2 sm:gap-5 items-center">
         <a href="https://github.com/Jasufr" target="_blank" className="hover:text-sky-600 transition-colors duration-200"><FontAwesomeIcon icon={['fab', 'github']} /></a>
         <a href="https://www.linkedin.com/in/justin-etienne/" target="_blank" className="hover:text-sky-600 transition-colors duration-200"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
