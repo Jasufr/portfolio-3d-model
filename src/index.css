@@ -20,8 +20,12 @@ body {
 }
 
 .text-vertical {
-  -webkit-writing-mode: vertical-lr; /* For Safari */
-  writing-mode: vertical-lr; /* Standard property */
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+
+  /* transform: rotate(-90deg);
+  transform-origin: bottom right; */
+
 }
 
 form input:-webkit-autofill,
