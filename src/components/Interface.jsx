@@ -69,7 +69,7 @@ const AboutSection = (props) => {
     transition={{
       duration: 0.5,
       delay: 1,
-    }}>Front-end Developer based in Tokyo.<br></br>JavaScript and 3D enthousiast.</motion.p>
+    }}>Front-end Developer based in Tokyo.<br></br>JavaScript and 3D enthusiast.</motion.p>
     <motion.div className="mt-6 flex flex-col sm:flex-row items-center gap-2 sm:gap-5 "
     initial={{
       opacity: 0,
@@ -101,7 +101,7 @@ const skills = [
     level: 95,
   },
   {
-    title: "Bootstrap",
+    title: "Bootstrap/Tailwind",
     level: 80,
   },
   {
@@ -113,8 +113,8 @@ const skills = [
     level: 70,
   },
   {
-    title: "React.js",
-    level: 45,
+    title: "React.js/Three.js",
+    level: 50,
   },
 ];
 
