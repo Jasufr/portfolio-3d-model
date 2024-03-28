@@ -4,7 +4,7 @@ export const Menu = (props) => {
   return (
     <>
       <div
-        className={`z-10 fixed top-0 right-1 md:right-3 bottom-0 overflow-hidden flex flex-col`}
+        className={`z-10 fixed top-0 right-1 sm:right-3 bottom-0 overflow-hidden flex flex-col`}
       >
         <div className="flex-1 flex items-center justify-start flex-col gap-6 p-2 w-8 md:w-12">
           <MenuButton label="About" onClick={() => onSectionChange(0)} />
@@ -19,6 +19,10 @@ export const Menu = (props) => {
 
 const MenuButton = (props) => {
   const { label, onClick } = props;
+  console.log(window.innerWidth);
+  const body = document.querySelector("#root");
+  console.log(body.clientWidth);
+  console.log(body.offsetWidth);
   return (
     <a
       onClick={onClick}
