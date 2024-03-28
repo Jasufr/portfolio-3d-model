@@ -19,6 +19,11 @@ body {
   text-shadow: -1px -1px 1px white;
 }
 
+.text-vertical {
+  -webkit-writing-mode: vertical-lr; /* For Safari */
+  writing-mode: vertical-lr; /* Standard property */
+}
+
 form input:-webkit-autofill,
 form input:-webkit-autofill:focus,
 form input:-webkit-autofill:hover,
