@@ -19,6 +19,12 @@ export const projects = [
     image: "projects/frnshr.png",
     description: "Interior design tool for finding suitable furniture from several websites based on a specific color scheme.",
   },
+  {
+    title: "YourMovieList",
+    url: "https://yourmovielist-52b14ea3ac04.herokuapp.com/",
+    images: "projects/yml.png",
+    description: "Movie watch list with movies from the IMDB API.",
+  },
 ];
 
 const Project = (props) => {
