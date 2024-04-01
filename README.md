@@ -1,4 +1,4 @@
-# Portfolio 3D
+# Portfolio 💼
 
 Portfolio in React.js with animated 3D character (Three.js). <br>
 Link: www.justinetienne.com
