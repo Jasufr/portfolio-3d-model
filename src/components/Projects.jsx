@@ -22,7 +22,7 @@ export const projects = [
   {
     title: "YourMovieList",
     url: "https://yourmovielist-52b14ea3ac04.herokuapp.com/",
-    images: "projects/yml.png",
+    image: "projects/yml.png",
     description: "Movie watch list with movies from the IMDB API.",
   },
 ];
