@@ -25,6 +25,12 @@ export const projects = [
     image: "projects/yml.png",
     description: "Movie watch list with movies from the IMDB API.",
   },
+  {
+    title: "GLTF File Viewer",
+    url: "https://gltffileviewer.netlify.app/",
+    image: "projects/gltffileviewer.png",
+    description: "3D Models (GLTF or GLB) Viewer App.",
+  },
 ];
 
 const Project = (props) => {
