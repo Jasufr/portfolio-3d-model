@@ -19,10 +19,10 @@ export const Menu = (props) => {
 
 const MenuButton = (props) => {
   const { label, onClick } = props;
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
   const body = document.querySelector("#root");
-  console.log(body.clientWidth);
-  console.log(body.offsetWidth);
+  // console.log(body.clientWidth);
+  // console.log(body.offsetWidth);
   return (
     <a
       onClick={onClick}
