@@ -4,7 +4,7 @@ import { animate, useMotionValue } from "framer-motion";
 
 import { motion } from "framer-motion-3d";
 import { atom, useAtom } from "jotai";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const projects = [
   {
@@ -35,6 +35,7 @@ export const projects = [
 
 const Project = (props) => {
   const { project, highlighted } = props;
+  const [isHovered, setIsHovered] = useState(false);
 
   const background = useRef();
   const bgOpacity = useMotionValue(0.4);
@@ -47,11 +48,21 @@ const Project = (props) => {
     background.current.material.opacity = bgOpacity.get();
   });
 
+  const handlePointerOver = () => {
+    setIsHovered(true);
+    animate(bgOpacity, 0.7);
+  };
+
+  const handlePointerOut = () => {
+    setIsHovered(false);
+    animate(bgOpacity, highlighted ? 0.7 : 0.4);
+  };
+
   return (
     <group {...props}>
       <mesh
         position-z={-0.001}
-        onClick={() => window.open(project.url, "_blank")}
+
         ref={background}
       >
         <planeGeometry args={[2.2, 2]} />
@@ -68,7 +79,11 @@ const Project = (props) => {
         anchorX={"left"}
         anchorY={"top"}
         fontSize={0.2}
+        onClick={() => window.open(project.url, "_blank")}
         position={[-1, -0.4, 0]}
+        onPointerOver={handlePointerOver}
+        onPointerOut={handlePointerOut}
+        color={isHovered ? "#075985" : "white"}
       >
         {project.title.toUpperCase()}
       </Text>
