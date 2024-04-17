@@ -58,11 +58,11 @@ const Project = (props) => {
     animate(bgOpacity, highlighted ? 0.7 : 0.4);
   };
 
+
   return (
     <group {...props}>
       <mesh
         position-z={-0.001}
-
         ref={background}
       >
         <planeGeometry args={[2.2, 2]} />
@@ -104,7 +104,7 @@ export const currentProjectAtom = atom(Math.floor(projects.length / 2));
 
 export const Projects = () => {
   const { viewport } = useThree();
-  const [currentProject] = useAtom(currentProjectAtom);
+  const [currentProject, setCurrentProject] = useAtom(currentProjectAtom);
 
   return (
     <group position-y={-viewport.height * 2 - 1}>
@@ -121,7 +121,7 @@ export const Projects = () => {
           }}
           scale={0.6}
         >
-          <Project project={project} highlighted={index === currentProject} />
+          <Project project={project} highlighted={index === currentProject} onClick={() => setCurrentProject(index)} />
         </motion.group>
       ))}
     </group>
