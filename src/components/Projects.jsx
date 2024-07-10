@@ -31,6 +31,12 @@ export const projects = [
     image: "projects/gltffileviewer.png",
     description: "3D Models (GLTF or GLB) Viewer App.",
   },
+  {
+    title: "GoRent",
+    url: "https://gorent-showcase.vercel.app/",
+    image: "projects/gorent.png",
+    description: "Car rental website, using NEXTJS and APIs to retrieve cars information."
+  },
 ];
 
 const Project = (props) => {
