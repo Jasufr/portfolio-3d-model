@@ -11,31 +11,31 @@ export const projects = [
     title: "Coshub",
     url: "https://www.google.com",
     image: "projects/coshub.png",
-    description: "Marketplace website for renting cosplays from individuals easily.",
+    description: "Marketplace website for renting cosplays from individuals easily. (Ruby On Rails)",
   },
   {
     title: "FRNSHR",
     url: "https://www.frnshr.shop",
     image: "projects/frnshr.png",
-    description: "Interior design tool for finding suitable furniture from several websites based on a specific color scheme.",
+    description: "Interior design tool for finding suitable furniture from several websites based on a specific color scheme. (Ruby On Rails)",
   },
   {
     title: "YourMovieList",
     url: "https://yourmovielist-52b14ea3ac04.herokuapp.com/",
     image: "projects/yml.png",
-    description: "Movie watch list with movies from the IMDB API.",
+    description: "Movie watch list with movies from the IMDB API. (Ruby On Rails)",
   },
   {
     title: "GLTF File Viewer",
     url: "https://gltffileviewer.netlify.app/",
     image: "projects/gltffileviewer.png",
-    description: "3D Models (GLTF or GLB) Viewer App.",
+    description: "3D Models (GLTF or GLB) Viewer App. (React Vite)",
   },
   {
     title: "GoRent",
     url: "https://gorent-showcase.vercel.app/",
     image: "projects/gorent.png",
-    description: "Car rental website, using NEXTJS and APIs to retrieve cars information."
+    description: "Car rental website, retrieving cars information from APIs. (React NextJS)"
   },
 ];
 
